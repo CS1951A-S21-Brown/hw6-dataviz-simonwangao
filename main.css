@@ -12,7 +12,7 @@
 /* Include any custom CSS styling here! */
 
 h4 {
-    text-align: center;
+    margin-left: 238px;
 }
 
 #attrInput1 {
@@ -37,4 +37,33 @@ h4 {
 
 #plot1 {
     margin-left: 100px;
+}
+
+#yearLabel {
+    margin-left: 238px;
+    width:50px;
+    display: inline-block;
+}
+
+#year {
+    position:relative;
+}
+
+#regionLabel {
+    margin-left: 30px;
+    width:60px;
+    display: inline-block;
+}
+
+#Regions {
+    position:relative;
+}
+
+#plot2 {
+    margin-left: 200px;
+}
+
+#tooltip {
+    background-color: #FFFFFF;
+    opacity: 0.95;
 }

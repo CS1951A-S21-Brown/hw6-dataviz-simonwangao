@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+    <head>
         <meta charset="utf-8">
         <title>Assignment 6 &laquo; Data Visualization Dashboard&raquo;</title>
         <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.6.2/css/bootstrap-slider.min.css">
         <link rel="stylesheet" href="main.css"/>
         <!--Feel free to add more CSS files as needed-->
         <script type="text/javascript" src="https://d3js.org/d3.v5.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.6.2/bootstrap-slider.min.js"></script>
     </head>
 <body>
     <div class="header">
@@ -21,14 +23,32 @@
                     <input type="text" id="attrInput1" class="form-control" placeholder="Year (default all years)" aria-label="Year"
                        aria-describedby="basic-addon2" size="17" maxlength="4">
                     <button id="submitButton" style="border-top-left-radius: 0; border-bottom-left-radius: 0;"
-                            class="btn btn-primary" type="button" onclick="setAttr()">
+                            class="btn btn-primary" type="button" onclick="setAttr1()">
                         Submit
                     </button>
                 </div>
                 <br>
-                <div id="plot1"></div>   
+                <div id="plot1"></div>
+                <br><br> 
 
-            <div id="graph2"></div><br/>
+            <div id="graph2"></div>
+                <h4>Part 2: Most Popular Game Genre per Region</h4>
+                <div class="controls2">
+                    <label id="yearLabel" for="year">Year:</label>
+                    <input id="year" type="text" class="span2"
+                           data-slider-min="1980" data-slider-max="2020" data-slider-step="1"
+                           data-slider-value="[1980,2020]"/>
+                    <label id="regionLabel" for="Regions">Region:</label>
+                    <select name="Regions" id="Regions" onchange="selectChange()">
+                        <option value="NA">NA</option>
+                        <option value="EU">EU</option>
+                        <option value="JP">JP</option>
+                        <option value="Other">Other</option>
+                        <option value="Global">Global</option>
+                    </select>
+                </div>
+                <br>
+                <div id="plot2"></div>
         </div>
         <div class="col-lg-6">
             <div id="graph3"></div>
@@ -37,5 +57,6 @@
     <!--Feel free to add more JavaScript files as needed-->
     <script type="text/javascript" src="main.js"></script>
     <script type="text/javascript" src="graphs_lollipop.js"></script>
+    <script type="text/javascript" src="graphs_pie.js"></script>
 </body>
 </html>

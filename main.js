@@ -13,6 +13,12 @@ let graph_3_width = MAX_WIDTH / 2, graph_3_height = 575;
 let data;
 let graph1_input_year = "";
 
+let cur_start_year = 1980;
+let cur_end_year = 2020;
+let slider = new Slider('#year', {});
+
+let cur_region = "NA";
+
 // Load data from billboard.csv file
 d3.csv("./data/video_games.csv").then(function(d) {
     data = d;
@@ -20,21 +26,33 @@ d3.csv("./data/video_games.csv").then(function(d) {
     // ? add more
 });
 
+// Update cur_start_year and cur_end_year on slideStop of range slider
+slider.on("slideStop", function(range) {
+    cur_start_year = range[0];
+    cur_end_year = range[1];
+    setGraph2();
+});
+
 /**
  * Updates cur attribute
  */
-function setAttr() {
+function setAttr1() {
     // graph 1
     graph1_input_year = document.getElementById("attrInput1").value;
-
-    updateDashboard();
+    setGraph1();
  }
+
+ function selectChange() {
+    cur_region = document.getElementById("Regions").value;
+    setGraph2();
+}
 
 /**
  * Updates dashboard scatterplot and barplot after change in date or cur_attr
  */
 function updateDashboard() {
     setGraph1();
+    setGraph2();
 }
 
 /**
