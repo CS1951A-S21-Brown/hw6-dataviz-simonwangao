@@ -10,3 +10,27 @@
 }
 
 /* Include any custom CSS styling here! */
+
+h4 {
+    text-align: center;
+}
+
+#attrInput1 {
+    display: block;
+    margin-right: 0px;
+    margin-left: 238px;
+    width: 170px;
+    height: 35px;
+}
+
+#submitButton {
+    position:absolute;
+    top:0;
+    right:0;
+    height: 35px;
+}
+
+.controls1 {
+    position:relative;
+    width:470px;
+}
