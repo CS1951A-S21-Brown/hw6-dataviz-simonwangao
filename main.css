@@ -67,3 +67,17 @@ h4 {
     background-color: #FFFFFF;
     opacity: 0.95;
 }
+
+#genreLabel {
+    margin-left: 238px;
+    width:50px;
+    display: inline-block;
+}
+
+#Genres {
+    position:relative;
+}
+
+#plot3 {
+    margin-left: 100px;
+}

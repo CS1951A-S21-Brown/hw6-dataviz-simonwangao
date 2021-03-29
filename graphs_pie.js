@@ -121,7 +121,7 @@ function setGraph2() {
 }
 
 function cleanData2(data) {
-    var res_dict = {}
+    var res_dict = {};
     for (i = 0; i < data.length; i++) {
         if (data[i].Year >= cur_start_year && data[i].Year <= cur_end_year) {
             // need this entry

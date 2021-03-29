@@ -19,11 +19,12 @@ let slider = new Slider('#year', {});
 
 let cur_region = "NA";
 
+let cur_genre = "Strategy";
+
 // Load data from billboard.csv file
 d3.csv("./data/video_games.csv").then(function(d) {
     data = d;
     updateDashboard();
-    // ? add more
 });
 
 // Update cur_start_year and cur_end_year on slideStop of range slider
@@ -42,9 +43,14 @@ function setAttr1() {
     setGraph1();
  }
 
- function selectChange() {
+function selectChange() {
     cur_region = document.getElementById("Regions").value;
     setGraph2();
+}
+
+function selectChange2() {
+    cur_genre = document.getElementById("Genres").value;
+    setGraph3();
 }
 
 /**
@@ -53,6 +59,7 @@ function setAttr1() {
 function updateDashboard() {
     setGraph1();
     setGraph2();
+    setGraph3();
 }
 
 /**
