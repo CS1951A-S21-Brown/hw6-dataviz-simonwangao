@@ -15,6 +15,10 @@ h4 {
     margin-left: 238px;
 }
 
+h5 {
+    margin-left: -210px;
+}
+
 #attrInput1 {
     display: block;
     margin-right: 0px;
@@ -79,5 +83,9 @@ h4 {
 }
 
 #plot3 {
+    margin-left: 100px;
+}
+
+#questions {
     margin-left: 100px;
 }
